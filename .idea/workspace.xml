@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c83f859-fbd1-4df9-9447-092cf92d40e0" name="Changes" comment="Initial python script with sources using ChatGPT">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/history_snippets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/sources.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/sources.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/regions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="4c83f859-fbd1-4df9-9447-092cf92d40e0" name="Changes" comment="had to separate into directory structure add import random">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +22,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
   "lastFilter": {
@@ -146,7 +135,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754317499126</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed and updated directory structure reflective of recommended structure">
+      <option name="closed" value="true" />
+      <created>1754319059535</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754319059535</updated>
+    </task>
+    <task id="LOCAL-00004" summary="had to separate into directory structure add import random">
+      <option name="closed" value="true" />
+      <created>1754319563624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1754319563624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,14 +167,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial python script with sources using ChatGPT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial python script with sources using ChatGPT" />
+    <MESSAGE value="Changed and updated directory structure reflective of recommended structure" />
+    <MESSAGE value="had to separate into directory structure add import random" />
+    <option name="LAST_COMMIT_MESSAGE" value="had to separate into directory structure add import random" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>32</line>
+          <line>33</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
