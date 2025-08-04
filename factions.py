@@ -1,49 +1,69 @@
 import json
-import random
 import os
+import random
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
+FACTIONS_FILE = os.path.join("data", "faction_scores.json")
+RELATIONSHIPS_FILE = os.path.join("data", "factions.json")
 
-# Load faction data
-with open(os.path.join(DATA_DIR, "factions.json")) as f:
-    factions_data = json.load(f)
+def load_factions():
+    with open(FACTIONS_FILE, "r") as f:
+        return json.load(f)
 
+def load_relationships():
+    with open(RELATIONSHIPS_FILE, "r") as f:
+        return json.load(f)
+
+faction_data = load_factions()
+faction_relationships = load_relationships()
+
+class FactionSystem:
+    def __init__(self):
+        self.scores = {faction: data["start_score"] for faction, data in faction_data.items()}
+
+    def modify_score(self, faction, amount):
+        if faction not in self.scores:
+            print(f"[!] Unknown faction: {faction}")
+            return
+
+        self.scores[faction] += amount
+        self.scores[faction] = max(-100, min(100, self.scores[faction]))
+        print(f"[~] Faction standing with {faction}: {self.scores[faction]}")
+
+    def get_score(self, faction):
+        return self.scores.get(faction, 0)
+
+    def list_scores(self):
+        print("\n=== Faction Scores ===")
+        for faction, score in self.scores.items():
+            desc = faction_data[faction]["description"]
+            print(f"- {faction} [{score}]: {desc}")
 
 def get_factions():
-    return list(factions_data.keys())
+    return list(faction_data.keys())
 
-def get_faction_info(name):
-    return factions_data.get(name, {})
-
-def describe_faction(name):
-    faction = get_faction_info(name)
-    if not faction:
-        return "Unknown faction."
-    return (
-        f"Faction: {name}\n"
-        f"Alignment: {faction['alignment']}\n"
-        f"Description: {faction['description']}\n"
-        f"Regions of Influence: {', '.join(faction['bonus_regions'])}\n"
-        f"Opposed to: {', '.join(faction['conflict_with'])}"
-    )
+def describe_faction(faction_name):
+    return faction_data.get(faction_name, {}).get("description", "No description available.")
 
 def get_npc_reaction(player_faction, npc_faction):
     if not npc_faction:
         return "neutral"
 
     if not player_faction:
-        # Independent player benefit: reduced hostility
-        if npc_faction in [f for f in factions_data if "conflict_with" in factions_data[f]]:
+        # Independent player benefit: reduced hostility chance
+        if npc_faction in faction_relationships:
             return "neutral" if random.random() < 0.5 else "hostile"
         else:
             return "neutral"
 
-    if npc_faction in factions_data.get(player_faction, {}).get("conflict_with", []):
-        return "hostile"
-    elif player_faction in factions_data.get(npc_faction, {}).get("conflict_with", []):
+    conflict = faction_relationships.get(player_faction, {}).get("conflict_with", [])
+    npc_conflict = faction_relationships.get(npc_faction, {}).get("conflict_with", [])
+
+    if npc_faction in conflict or player_faction in npc_conflict:
         return "hostile"
     elif npc_faction == player_faction:
         return "friendly"
     else:
         return "neutral"
+
+def is_independent(player):
+    return player.faction is None

@@ -1,0 +1,17 @@
+{
+  "canned_food": {
+    "type": "consumable",
+    "effects": ["restore_health"],
+    "description": "Non-perishable and slightly nostalgic."
+  },
+  "rusted_gun": {
+    "type": "weapon",
+    "effects": ["increase_attack"],
+    "description": "Barely functional but better than nothing."
+  },
+  "data_shard": {
+    "type": "quest",
+    "effects": ["unlock_terminal_access"],
+    "description": "Encrypted and glowing faintly."
+  }
+}

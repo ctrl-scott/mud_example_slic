@@ -1,7 +1,9 @@
+import random
 from player import Player
 from regions import enter_region
 from factions import get_factions, describe_faction
-import random
+from event_manager import EventManager
+import events
 
 def choose_faction(player):
     print("\n=== Choose Your Faction ===")
@@ -31,7 +33,6 @@ def choose_faction(player):
         except ValueError:
             print("Please enter a valid number.")
 
-
 def main():
     print("Welcome to Heartland Crawl\n")
     name = input("Enter your name: ")
@@ -39,12 +40,19 @@ def main():
 
     choose_faction(player)
 
-    # Example starting regions — can be randomized or selected
     available_regions = ["Suburbia", "Urban Core", "Rural Outskirts", "Squatter Zone"]
     player.region = random.choice(available_regions)
     enter_region(player)
 
-    player.describe()
+    event_manager = EventManager()
+    event_manager.register_event("Find Abandoned Backpack", events.find_abandoned_backpack)
+    event_manager.register_event("Sudden Raid", events.sudden_raid)
+
+    event_manager.trigger_random_event(player)
+
+    player.inventory.list_items()
+    player.status_effects.list_status()
+    player.faction_scores.list_scores()
 
 if __name__ == "__main__":
     main()

@@ -1,29 +1,28 @@
 import json
 import random
 import os
-
 from factions import get_npc_reaction
+from chat.reaction import respond_to_player
 
-# Load history and NPC data
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
 
-with open(os.path.join(DATA_DIR, "history_snippets.json")) as f:
-    history_data = json.load(f)
+NPC_DATA_FILE = os.path.join("data", "npcs.json")
+HISTORY_DATA_FILE = os.path.join("data", "history_snippets.json")
 
-with open(os.path.join(DATA_DIR, "npcs.json")) as f:
+with open(NPC_DATA_FILE) as f:
     npc_data = json.load(f)
 
+with open(HISTORY_DATA_FILE) as f:
+    history_data = json.load(f)
 
 def enter_region(player):
     region = player.region
     print(f"\nYou have entered {region}.")
 
-    # Show historical context
+    # Show historical snippet
     if region in history_data:
         print("Local History Flashback:", random.choice(history_data[region]))
 
-    # Spawn NPC with reaction based on faction
+    # Encounter NPC with faction reaction
     if region in npc_data:
         npc = random.choice(npc_data[region])
         print(f"\nYou encounter {npc['name']}.")
@@ -31,5 +30,6 @@ def enter_region(player):
         npc_faction = npc.get("faction")
         reaction = get_npc_reaction(player.faction, npc_faction)
         print(f"{npc['name']}'s reaction to you is: {reaction.upper()}")
+        print(respond_to_player(reaction, npc['name']))
     else:
         print("This region seems oddly deserted...")

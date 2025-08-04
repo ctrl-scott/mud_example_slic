@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c83f859-fbd1-4df9-9447-092cf92d40e0" name="Changes" comment="adding to structure, files, and adding add-in option descriptions">
-      <change afterPath="$PROJECT_DIR$/chat/reaction.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/factions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/npcs.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/factions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_data/factions_depre.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_data/history_snippets_depre.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_data/npcs_depre.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_files/factions_depre.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_files/main_depre.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_files/player_depre.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_files/regions_depre.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/old_files/regions_notmodular.py" afterDir="false" />
+    <list default="true" id="4c83f859-fbd1-4df9-9447-092cf92d40e0" name="Changes" comment="iteration">
+      <change afterPath="$PROJECT_DIR$/data/faction_scores.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/inventory_items.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/status_effects.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/events.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/status.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heartland_crawl_chatgpt_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/heartland_crawl_chatgpt_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat.py" beforeDir="false" afterPath="$PROJECT_DIR$/old_files/chat_depre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factions.py" beforeDir="false" afterPath="$PROJECT_DIR$/factions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/regions.py" beforeDir="false" afterPath="$PROJECT_DIR$/regions.py" afterDir="false" />
@@ -71,6 +67,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/old_files" />
+      <recent name="$PROJECT_DIR$/chat" />
       <recent name="$PROJECT_DIR$/old_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -218,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754322822727</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="iteration">
+      <option name="closed" value="true" />
+      <created>1754326028230</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754326028230</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +243,7 @@
     <MESSAGE value="had to separate into directory structure add import random" />
     <MESSAGE value="adding options" />
     <MESSAGE value="adding to structure, files, and adding add-in option descriptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding to structure, files, and adding add-in option descriptions" />
+    <MESSAGE value="iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="iteration" />
   </component>
 </project>

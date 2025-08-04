@@ -1,3 +1,6 @@
+from inventory import Inventory
+from factions import FactionSystem
+from status import StatusManager
 class Player:
 
     #
@@ -7,9 +10,13 @@ class Player:
         self.region = None
         self.inventory = []
         self.faction = None
+        self.faction_scores = FactionSystem()  # New
+        self.inventory = Inventory()  # New
         self.faction_scores = {}
         self.health = 100
+        self.status_effects = StatusManager()
         self.status_effects = []
+
 
     def join_faction(self, faction_name):
         self.faction = faction_name

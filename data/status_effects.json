@@ -1,0 +1,22 @@
+{
+  "Injured": {
+    "description": "You move slower and are more vulnerable in combat.",
+    "duration": "temporary",
+    "impact": ["-10% reaction time", "reduced mobility"]
+  },
+  "Inspired": {
+    "description": "You feel confident and persuasive in conversations.",
+    "duration": "temporary",
+    "impact": ["+15% charisma", "faction trust boost"]
+  },
+  "Fatigued": {
+    "description": "You are tired, affecting your decision-making and awareness.",
+    "duration": "temporary",
+    "impact": ["-10% awareness", "-5% social defense"]
+  },
+  "Diseased": {
+    "description": "An untreated illness is affecting your health and stamina.",
+    "duration": "persistent",
+    "impact": ["-20% health recovery", "NPC hostility increased"]
+  }
+}
