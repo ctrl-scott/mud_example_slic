@@ -14,6 +14,12 @@ with open(NPC_DATA_FILE) as f:
 with open(HISTORY_DATA_FILE) as f:
     history_data = json.load(f)
 
+available_regions = [
+    "Suburbia",
+    "Urban Core",
+    "Rural Outskirts",
+    "Squatter Zone"
+]
 def enter_region(player):
     region = player.region
     print(f"\nYou have entered {region}.")
@@ -33,3 +39,5 @@ def enter_region(player):
         print(respond_to_player(reaction, npc['name']))
     else:
         print("This region seems oddly deserted...")
+
+__all__ = ["enter_region", "available_regions"]

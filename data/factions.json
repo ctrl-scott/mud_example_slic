@@ -1,26 +1,32 @@
-{
-  "Tech Burnouts": {
-    "alignment": "cynical",
-    "description": "Former startup employees and digital nomads burned out by the gig economy. Disillusioned, sharp, but still clinging to techno-hope.",
-    "bonus_regions": ["Suburbia", "Urban Core"],
-    "conflict_with": ["Boomer Romantics"]
-  },
-  "Queer Liberation Front": {
-    "alignment": "radical",
-    "description": "Anti-assimilationist, anarcho-queer collectivists rooted in protest movements and mutual aid.",
-    "bonus_regions": ["Urban Core", "Squatter Zone"],
-    "conflict_with": ["Suburban Survivalists"]
-  },
-  "Boomer Romantics": {
-    "alignment": "nostalgic",
-    "description": "Believers in soulmates and chivalry, obsessed with the past and wary of hookup culture.",
-    "bonus_regions": ["Suburbia", "Rural Outskirts"],
-    "conflict_with": ["Tech Burnouts"]
-  },
-  "Suburban Survivalists": {
-    "alignment": "paranoid",
-    "description": "Prepper conservatives hiding out in cul-de-sacs. Mistrust outsiders, obsessed with security.",
-    "bonus_regions": ["Suburbia", "Rural Outskirts"],
-    "conflict_with": ["Queer Liberation Front"]
-  }
-}
+[
+    {
+        "name": "Anarchists",
+        "description": "Rejects of order, champions of autonomy.",
+        "starting_item": "Molotov Cocktail",
+        "status": "You carry the torch of the street. +10 stealth in squatter zones."
+    },
+    {
+        "name": "Corporate Survivors",
+        "description": "Former execs and grunts holding onto privilege.",
+        "starting_item": "Old Company Keycard",
+        "status": "You still speak the language of leverage. +10 negotiation with ex-corporate NPCs."
+    },
+    {
+        "name": "Faithful Remnant",
+        "description": "The devout and desperate clinging to meaning.",
+        "starting_item": "Worn Bible",
+        "status": "Faith shields you—sometimes. +5 resistance to despair and certain diseases."
+    },
+    {
+        "name": "Data Ghosts",
+        "description": "Hackers and net-runners still haunting the ruins of the old web.",
+        "starting_item": "Encrypted USB Drive",
+        "status": "You read the signals no one else sees. +15 to detect hidden messages and dark web rumors."
+    },
+    {
+        "name": "The Mutuals",
+        "description": "Radical mutual aid organizers making the collapse survivable.",
+        "starting_item": "Crate of Supplies",
+        "status": "Your networks nourish you. +5 regeneration and chance for random help in urban cores."
+    }
+]

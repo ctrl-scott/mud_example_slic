@@ -67,3 +67,35 @@ def get_npc_reaction(player_faction, npc_faction):
 
 def is_independent(player):
     return player.faction is None
+def choose_faction(player):
+    import json
+
+    with open("data/factions.json") as f:
+        factions = json.load(f)
+
+    print("\nChoose a faction to align with:")
+    for i, faction in enumerate(factions, 1):
+        print(f"{i}. {faction['name']} - {faction['description']}")
+    print("0. Stay Independent (no faction)")
+
+    choice = input("Enter the number of your choice: ").strip()
+    if choice == "0":
+        print("You remain independent, with unique resilience bonuses.")
+        player.faction = None
+        player.status_effects.add_status("Independent", "You walk your own path. Some NPCs may trust you more—or less.")
+    else:
+        try:
+            idx = int(choice) - 1
+            faction = factions[idx]
+            player.faction = faction["name"]
+            player.inventory.add_item(faction.get("starting_item", "Faction Patch"))
+            player.status_effects.add_status(faction["name"], faction.get("status", "You belong to a tribe now."))
+            player.faction_scores.set_score(faction["name"], 1)
+            print(f"You've joined the {faction['name']}!")
+        except (IndexError, ValueError):
+            print("Invalid choice. Staying independent.")
+            player.faction = None
+            player.status_effects.add_status("Independent", "You walk your own path.")
+
+# This line ensures choose_faction is available to import
+#__all__ =["choose_faction"]

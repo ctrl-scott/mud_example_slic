@@ -1,39 +1,30 @@
+# player.py
+
+from effects.status import StatusEffects
 from inventory import Inventory
-from factions import FactionSystem
-from status import StatusManager
+
 class Player:
-
-    #
-
     def __init__(self, name):
         self.name = name
         self.region = None
-        self.inventory = []
         self.faction = None
-        self.faction_scores = FactionSystem()  # New
-        self.inventory = Inventory()  # New
-        self.faction_scores = {}
-        self.health = 100
-        self.status_effects = StatusManager()
-        self.status_effects = []
+        self.faction_score = {}
+        self.inventory = Inventory()
+        self.status_effects = StatusEffects()
 
+    def update_faction_score(self, faction_name, amount):
+        if faction_name not in self.faction_score:
+            self.faction_score[faction_name] = 0
+        self.faction_score[faction_name] += amount
 
-    def join_faction(self, faction_name):
-        self.faction = faction_name
-        self.faction_scores[faction_name] = self.faction_scores.get(faction_name, 0) + 1
-
-    def is_independent(player):
-        return player.faction is None
-
-    def update_faction_score(self, faction_name, points):
-        self.faction_scores[faction_name] = self.faction_scores.get(faction_name, 0) + points
-
-    def describe(self):
-        print(f"\n=== Player Summary ===")
-        print(f"Name: {self.name}")
+    def show_status(self):
+        print(f"\n{self.name}'s Status")
         print(f"Region: {self.region}")
-        print(f"Faction: {self.faction}")
-        print(f"Faction Scores: {self.faction_scores}")
-        print(f"Inventory: {self.inventory}")
-        print(f"Health: {self.health}")
-        print(f"Status Effects: {self.status_effects}")
+        print(f"Faction: {self.faction if self.faction else 'Independent'}")
+        print("Inventory:", ', '.join(self.inventory.items) if self.inventory.items else "Empty")
+        print("Status Effects:")
+        for status, description in self.status_effects.list_statuses().items():
+            print(f"  - {status}: {description}")
+        print("Faction Scores:")
+        for faction, score in self.faction_score.items():
+            print(f"  - {faction}: {score}")
