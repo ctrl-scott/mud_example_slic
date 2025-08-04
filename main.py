@@ -28,6 +28,7 @@ def start_game():
 
     player = Player(name, pronouns, orientation, region)
 
+
     for day in range(1, 6):
         print(f"\nDay {day} in {player.region}...")
         enter_region(player)

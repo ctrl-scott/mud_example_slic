@@ -1,3 +1,4 @@
+import random
 # === chat.py ===
 def chat_encounter(player):
     print("\nA stranger messages you on LoveLink...")
