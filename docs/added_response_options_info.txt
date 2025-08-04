@@ -1,4 +1,4 @@
 /lifesaver: gives the player 3 and the other option is /lifesaver on
-other people, the player has infinite /lifesavers to use, it creates a paradox in play, while the
-user only gets 3, the profound impact while deprecating reputation, builds other types of relationships
+other people, the player has infinite /lifesavers to use on other people, it creates a paradox in play, while the
+user only gets 3, the profound impact while deprecating/decrementing reputation, builds other types of relationships
 and reputation markers that are not yet defined in the game or calculated
