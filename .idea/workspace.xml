@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c83f859-fbd1-4df9-9447-092cf92d40e0" name="Changes" comment="iteration grammar per personal preference based out of defintion and plural usage and ChatGPT presentation, thus, statuses to status">
-      <change beforePath="$PROJECT_DIR$/.idea/mud_example_slic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mud_example_slic.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/factions.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/factions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/factions.py" beforeDir="false" afterPath="$PROJECT_DIR$/factions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/regions.py" beforeDir="false" afterPath="$PROJECT_DIR$/regions.py" afterDir="false" />
-    </list>
+    <list default="true" id="4c83f859-fbd1-4df9-9447-092cf92d40e0" name="Changes" comment="working around project - went to deep to fast" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -226,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754328568364</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="working around project - went to deep to fast">
+      <option name="closed" value="true" />
+      <created>1754331133095</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1754331133095</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +249,8 @@
     <MESSAGE value="adding to structure, files, and adding add-in option descriptions" />
     <MESSAGE value="iteration" />
     <MESSAGE value="iteration grammar per personal preference based out of defintion and plural usage and ChatGPT presentation, thus, statuses to status" />
-    <option name="LAST_COMMIT_MESSAGE" value="iteration grammar per personal preference based out of defintion and plural usage and ChatGPT presentation, thus, statuses to status" />
+    <MESSAGE value="working around project - went to deep to fast" />
+    <option name="LAST_COMMIT_MESSAGE" value="working around project - went to deep to fast" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
