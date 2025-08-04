@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c83f859-fbd1-4df9-9447-092cf92d40e0" name="Changes" comment="adding to structure, files, and adding add-in option descriptions">
-      <change afterPath="$PROJECT_DIR$/docs/ChatGPT_edits_suggestions" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat/reaction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/factions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/npcs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/factions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/factions_depre.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/history_snippets_depre.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_data/npcs_depre.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_files/factions_depre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_files/main_depre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_files/player_depre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_files/regions_depre.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_files/regions_notmodular.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/history_snippets.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/history_snippets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heartland_crawl_chatgpt_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/heartland_crawl_chatgpt_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/regions.py" beforeDir="false" afterPath="$PROJECT_DIR$/regions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,9 +64,21 @@
     "Python.heartland_crawl_chatgpt_initial.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/scottowen/PycharmProjects/2025/mud_example_slic/old_files"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/old_files" />
+      <recent name="$PROJECT_DIR$/old_data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/chat" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/old_files" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="heartland_crawl_chatgpt_initial" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="mud_example_slic" />
@@ -185,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754321858077</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="adding to structure, files, and adding add-in option descriptions">
+      <option name="closed" value="true" />
+      <created>1754322822727</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1754322822727</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,16 +239,5 @@
     <MESSAGE value="adding options" />
     <MESSAGE value="adding to structure, files, and adding add-in option descriptions" />
     <option name="LAST_COMMIT_MESSAGE" value="adding to structure, files, and adding add-in option descriptions" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

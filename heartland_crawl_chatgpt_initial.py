@@ -25,7 +25,7 @@ class Player:
         self.infection_status = []
         self.history = []
 
-# === regions.py ===
+# === regions_notmodular.py ===
 import random
 
 regions = {
@@ -92,7 +92,7 @@ def chat_encounter(player):
 # === main.py ===
 import time
 from player import Player
-from regions import enter_region
+from old_files.regions_notmodular import enter_region
 from chat import chat_encounter
 
 def start_game():

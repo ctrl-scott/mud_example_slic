@@ -1,0 +1,26 @@
+{
+  "Tech Burnouts": {
+    "alignment": "cynical",
+    "description": "Former startup employees and digital nomads burned out by the gig economy. Disillusioned, sharp, but still clinging to techno-hope.",
+    "bonus_regions": ["Suburbia", "Urban Core"],
+    "conflict_with": ["Boomer Romantics"]
+  },
+  "Queer Liberation Front": {
+    "alignment": "radical",
+    "description": "Anti-assimilationist, anarcho-queer collectivists rooted in protest movements and mutual aid.",
+    "bonus_regions": ["Urban Core", "Squatter Zone"],
+    "conflict_with": ["Suburban Survivalists"]
+  },
+  "Boomer Romantics": {
+    "alignment": "nostalgic",
+    "description": "Believers in soulmates and chivalry, obsessed with the past and wary of hookup culture.",
+    "bonus_regions": ["Suburbia", "Rural Outskirts"],
+    "conflict_with": ["Tech Burnouts"]
+  },
+  "Suburban Survivalists": {
+    "alignment": "paranoid",
+    "description": "Prepper conservatives hiding out in cul-de-sacs. Mistrust outsiders, obsessed with security.",
+    "bonus_regions": ["Suburbia", "Rural Outskirts"],
+    "conflict_with": ["Queer Liberation Front"]
+  }
+}

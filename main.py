@@ -1,46 +1,50 @@
-# Heartland Crawl - Modular Text-Based Online Dating MUD Engine
-#
-# Sources and References:
-# - Cohen, Lizabeth. *A Consumers' Republic: The Politics of Mass Consumption in Postwar America*. Vintage, 2003.
-# - Klinenberg, Eric. *Palaces for the People: How Social Infrastructure Can Help Fight Inequality, Polarization, and the Decline of Civic Life*. Crown, 2018.
-# - Gillon, Steven M. *The Long Shadow of the Great Recession: Economic Policy and the Future of the American Dream*. Polity, 2021.
-# - Schulman, Sarah. *The Gentrification of the Mind: Witness to a Lost Imagination*. University of California Press, 2012.
-# - Boyd, Danah. *It's Complicated: The Social Lives of Networked Teens*. Yale UP, 2014.
-# - Turkle, Sherry. *Reclaiming Conversation: The Power of Talk in a Digital Age*. Penguin, 2015.
-# - Centers for Disease Control and Prevention. "HIV Basics." www.cdc.gov/hiv/basics.
-# - Pew Research Center. "The State of Online Dating in 2023." www.pewresearch.org.
-# - OpenAI ChatGPT, model GPT-4, used to assist with code structure and game logic development.
-
-# Heartland Crawl - Modular Text-Based Online Dating MUD Engine
-# === main.py ===
-import time
 from player import Player
 from regions import enter_region
-from chat import chat_encounter
+from factions import get_factions, describe_faction
+import random
 
-def start_game():
-    print("Welcome to Heartland Crawl")
+def choose_faction(player):
+    print("\n=== Choose Your Faction ===")
+    factions = get_factions()
+    for i, name in enumerate(factions):
+        print(f"{i+1}. {name}")
+    print("0. Continue without joining a faction")
+
+    while True:
+        try:
+            choice = int(input("Enter the number of your chosen faction: "))
+            if choice == 0:
+                print("\nYou chose to remain independent.")
+                break
+            elif 1 <= choice <= len(factions):
+                selected = factions[choice - 1]
+                print("\n" + describe_faction(selected))
+                confirm = input("Join this faction? (y/n): ").strip().lower()
+                if confirm == 'y':
+                    player.join_faction(selected)
+                    print(f"\nYou have joined the {selected}!\n")
+                    break
+                else:
+                    print("Faction not joined. Choose again or press 0 to skip.")
+            else:
+                print("Invalid number. Try again.")
+        except ValueError:
+            print("Please enter a valid number.")
+
+
+def main():
+    print("Welcome to Heartland Crawl\n")
     name = input("Enter your name: ")
-    pronouns = input("Your pronouns (e.g. they/them): ")
-    orientation = input("Your orientation (e.g. het, hom, bis): ")
-    print("Choose a region: Suburbia, Urban Core, Rural Outskirts, Squatter Zone")
-    region = input("Your starting region: ")
+    player = Player(name)
 
-    player = Player(name, pronouns, orientation, region)
+    choose_faction(player)
 
+    # Example starting regions — can be randomized or selected
+    available_regions = ["Suburbia", "Urban Core", "Rural Outskirts", "Squatter Zone"]
+    player.region = random.choice(available_regions)
+    enter_region(player)
 
-    for day in range(1, 6):
-        print(f"\nDay {day} in {player.region}...")
-        enter_region(player)
-        chat_encounter(player)
-        time.sleep(1)
-
-    print("\nGame Over. Summary:")
-    print(f"Reputation: {player.reputation}, Health: {player.health}")
-    if player.infection_status:
-        print(f"Infections: {', '.join(player.infection_status)}")
-    else:
-        print("You remained healthy.")
+    player.describe()
 
 if __name__ == "__main__":
-    start_game()
+    main()

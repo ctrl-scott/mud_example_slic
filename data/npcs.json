@@ -1,0 +1,26 @@
+{
+  "Suburbia": [
+    {
+      "name": "Carol from HOA",
+      "description": "A strict but lonely homeowner who loves tradition.",
+      "faction": "Boomer Romantics"
+    },
+    {
+      "name": "Dylan the Prepper",
+      "description": "Always watching from his blinds with a loaded rifle.",
+      "faction": "Suburban Survivalists"
+    }
+  ],
+  "Urban Core": [
+    {
+      "name": "Zee the Medic",
+      "description": "A street medic who’s patched up more protesters than they can count.",
+      "faction": "Queer Liberation Front"
+    },
+    {
+      "name": "Marla the Ghost Coder",
+      "description": "Once wrote dating algorithms, now she dumpster dives.",
+      "faction": "Tech Burnouts"
+    }
+  ]
+}

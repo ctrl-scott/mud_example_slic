@@ -1,0 +1,58 @@
+{
+  "Suburbia": [
+    {
+      "name": "Divorcee (38)",
+      "description": "Recently divorced parent exploring online dating for the first time. Wary, witty, but still hopeful."
+    },
+    {
+      "name": "HOA President",
+      "description": "Power-hungry enforcer of suburban order. Politely racist and obsessed with property values."
+    },
+    {
+      "name": "Disillusioned Realtor",
+      "description": "Former top-seller turned burnout. Knows every foreclosure in the neighborhood."
+    }
+  ],
+  "Urban Core": [
+    {
+      "name": "Queer Activist",
+      "description": "Outspoken and impassioned, they’ve been at every protest since 2016. Looks for emotional intelligence in matches."
+    },
+    {
+      "name": "Artist (nonbinary)",
+      "description": "Lives in a converted warehouse. Makes zines and hates dating apps, but uses them anyway."
+    },
+    {
+      "name": "Club Promoter",
+      "description": "Knows where the underground party is. Emotionally unavailable, charming, and possibly dangerous."
+    }
+  ],
+  "Rural Outskirts": [
+    {
+      "name": "Hunter",
+      "description": "Quiet and well-armed. Distrusts city folk but warms up if you know your game laws."
+    },
+    {
+      "name": "Opioid Survivor",
+      "description": "Recovering addict who lost friends to fentanyl. Deeply empathetic and trauma-aware."
+    },
+    {
+      "name": "Veteran (PTSD)",
+      "description": "Highly disciplined but haunted. Struggles with connection and mistrusts government programs."
+    }
+  ],
+  "Squatter Zone": [
+    {
+      "name": "Street Medic",
+      "description": "Part-time EMT, full-time protest medic. Carries Narcan and speaks in anarchist slang."
+    },
+    {
+      "name": "Punk Nomad",
+      "description": "Lives out of a tent and dumpster dives. Charismatic and deeply idealistic."
+    },
+    {
+      "name": "Burner",
+      "description": "Radically self-expressive, polyamorous, and hard to pin down. Spiritual but unpredictable."
+    }
+  ]
+}
