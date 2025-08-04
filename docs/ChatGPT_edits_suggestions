@@ -1,0 +1,48 @@
+# Heartland Crawl - Modular Text-Based Online Dating MUD Engine
+#
+# Sources and References:
+# - Cohen, Lizabeth. *A Consumers' Republic: The Politics of Mass Consumption in Postwar America*. Vintage, 2003.
+# - Klinenberg, Eric. *Palaces for the People: How Social Infrastructure Can Help Fight Inequality, Polarization, and the Decline of Civic Life*. Crown, 2018.
+# - Gillon, Steven M. *The Long Shadow of the Great Recession: Economic Policy and the Future of the American Dream*. Polity, 2021.
+# - Schulman, Sarah. *The Gentrification of the Mind: Witness to a Lost Imagination*. University of California Press, 2012.
+# - Boyd, Danah. *It's Complicated: The Social Lives of Networked Teens*. Yale UP, 2014.
+# - Turkle, Sherry. *Reclaiming Conversation: The Power of Talk in a Digital Age*. Penguin, 2015.
+# - Centers for Disease Control and Prevention. "HIV Basics." www.cdc.gov/hiv/basics.
+# - Pew Research Center. "The State of Online Dating in 2023." www.pewresearch.org.
+# - OpenAI ChatGPT, model GPT-4, used to assist with code structure and game logic development.
+
+# Sample history_snippets.json content for Heartland Crawl
+# Save this JSON in a file located at: data/history_snippets.json
+
+# {
+#     "Suburbia": [
+#         "1948: Shelley v. Kraemer rules racial covenants unenforceable in housing deeds.",
+#         "2008: The subprime mortgage crisis devastates suburban homeownership.",
+#         "2020: Suburban households navigate remote work and rising domestic tensions during COVID-19."
+#     ],
+#     "Urban Core": [
+#         "1969: The Stonewall riots spark a new era of LGBTQ+ resistance.",
+#         "1990s: Gentrification accelerates, displacing long-time working-class residents.",
+#         "2020: George Floyd protests bring national attention to police brutality."
+#     ],
+#     "Rural Outskirts": [
+#         "1980s: Reaganomics and deindustrialization lead to mass unemployment in small towns.",
+#         "2000s: Opioid addiction becomes an epidemic in rural America.",
+#         "2016: Political polarization spikes as rural-urban divides deepen."
+#     ],
+#     "Squatter Zone": [
+#         "2011: The Occupy Wall Street movement galvanizes a generation of economic dissenters.",
+#         "2021: Eviction moratoriums expire, swelling the population of unhoused squatters.",
+#         "2023: Pop-up anarchist clinics provide mutual aid in abandoned buildings."
+#     ]
+# }
+
+# Incorporate this JSON into your region logic using Python's json module.
+# Example usage (to be added in regions.py):
+#
+# import json
+# with open("data/history_snippets.json") as f:
+#     history_data = json.load(f)
+#
+# Then display a random snippet in enter_region()
+# print("Local History Flashback:", random.choice(history_data[player.region]))

@@ -1,5 +1,9 @@
 # === regions.py ===
+import json
 import random
+
+import player
+
 
 regions = {
     "Suburbia": {
@@ -29,6 +33,10 @@ def enter_region(player):
     print(f"\n-- Entering {player.region} --")
     print(f"Historical Context: {region['history']}")
     print(f"You encounter: {random.choice(region['npcs'])}")
+    with open("data/history_snippets.json") as f:
+        history_data = json.load(f)
+
+    print("History Flashback Snippet (Random):", random.choice(history_data[player.region]))
 
     if random.random() < region['risk']['crime']:
         print("\nYou were mugged by a stranger. Reputation -10.")
