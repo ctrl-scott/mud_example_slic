@@ -22,7 +22,7 @@ def start_game():
     print("Welcome to Heartland Crawl")
     name = input("Enter your name: ")
     pronouns = input("Your pronouns (e.g. they/them): ")
-    orientation = input("Your orientation (e.g. bisexual): ")
+    orientation = input("Your orientation (e.g. het, hom, bis): ")
     print("Choose a region: Suburbia, Urban Core, Rural Outskirts, Squatter Zone")
     region = input("Your starting region: ")
 

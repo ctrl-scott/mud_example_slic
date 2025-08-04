@@ -9,7 +9,7 @@ def chat_encounter(player):
         "Tell me one historical event that shaped your love life."
     ]
     print("They say:", random.choice(responses))
-    action = input("Respond with /flirt, /truth, /lifesaver or /block: ")
+    action = input("Respond with /flirt, /truth, /lifesaver, or /block: ")
 
 #added optional /lifesaver has to be further integrated
     if action == "/lifesaver":
@@ -22,6 +22,6 @@ def chat_encounter(player):
         print("They appreciate your honesty. You gain +10 reputation.")
         player.reputation += 10
     elif action == "/block":
-        print("You blocked them. No harm done.")
+        print("You blocked them. No harm done. Allegedly.")
     else:
         print("Unrecognized action. The moment passes.")
